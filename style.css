@@ -61,3 +61,17 @@ h1, h2{
 #book-list li:hover{
     border-color: #9361bf;
 }
+
+.delete{
+    float: right;
+    background: #9361bf;
+    padding: 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+}
+
+.delete:hover{
+    background: #333;
+}
+
