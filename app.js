@@ -1,18 +1,34 @@
-var btns = document.queryelectorAll('#book-list  .delete');
+const list = document.querySelector.('#ook-list ul');
 
-Array.from(btns).forEach(function(btn){
-    btn.addEventListener('click', function(e){
-        const li = e.target.parentElement;
-        li.parentNode.removeChild(li);
-    });
-});
+//delete books
+list.addEventListener('click', function(e){
+if(e.target.className == 'delete'){
+    const li = e.target.parentElement;
+    list.moveChild(li);
+}
 
-const link = document.querySelector('#page-banner a');
+})
 
-link.addEventListener('click', function(e){
-    e.preventDefault();
-    console.log( 'navigation to', e.target.textContent, 'was prevented');
-});
+
+
+
+
+
+// var btns = document.querySelectorAll('#book-list  .delete');
+
+// Array.from(btns).forEach(function(btn){
+//     btn.addEventListener('click', function(e){
+//         const li = e.target.parentElement;
+//         li.parentNode.removeChild(li);
+//     });
+// });
+
+// const link = document.querySelector('#page-banner a');
+
+// link.addEventListener('click', function(e){
+//     e.preventDefault();
+//     console.log( 'navigation to', e.target.textContent, 'was prevented');
+// });
 
 
 // const bookList = document.querySelector('#book-list');
