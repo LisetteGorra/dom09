@@ -18,6 +18,10 @@ addForm.addEventListener('submit', function(e){
     const value = addForm.querySelector('input[type="text" ]').value;
     console.log(value);
 
+    //create element
+    const li = document.createElement('li');
+    const bookName = document.createElement('span');
+    const deletebtn = document.createElement('span');
 });
 
 
