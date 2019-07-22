@@ -22,6 +22,15 @@ addForm.addEventListener('submit', function(e){
     const li = document.createElement('li');
     const bookName = document.createElement('span');
     const deletebtn = document.createElement('span');
+
+
+    //add content
+
+    //append to document
+    li.appendChild(bookName);
+    li.appendChild(deletebtn);
+    list.appendChild(li);
+
 });
 
 
