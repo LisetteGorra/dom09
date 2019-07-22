@@ -25,7 +25,8 @@ addForm.addEventListener('submit', function(e){
 
 
     //add content
-
+    deletebtn.textContent = 'delete';
+    bookName.textContent = value;
     //append to document
     li.appendChild(bookName);
     li.appendChild(deletebtn);
