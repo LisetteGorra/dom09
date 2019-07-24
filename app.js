@@ -18,6 +18,19 @@ addForm.addEventListener('submit', function(e){
     const value = addForm.querySelector('input[type="text" ]').value;
     console.log(value);
 
+
+    //hide books
+const hideBox = document.querySelector('#hide');
+hideBox.addEventListener('change', function(e){
+    if(hideBox.checked){
+        list.style.display= "none";
+    } else{
+        list.style.display = "initial";
+    }
+    
+});
+
+
     //create element
     const li = document.createElement('li');
     const bookName = document.createElement('span');

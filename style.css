@@ -78,6 +78,13 @@ h1, h2{
     width: 400px;
     margin: 0 auto;
 }
+#add-book #hide{
+    width: 30px;
+   
+}
+#add-book label{
+    line-height: 52px;
+}
 
 #add-book input{
     display: block;
