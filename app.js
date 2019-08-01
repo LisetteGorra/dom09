@@ -3,19 +3,20 @@ document.addEventListener('DOMContentLoaded', function(){
 })
 
 
-const list = document.querySelector('#book-list ul');
+const list = document.querySelector('#todo-list ul');
+
 const forms = document.forms;
 
-// delete books
+// delete todos
 list.addEventListener('click', (e) => {
-  if(e.target.className == 'delete'){
+  if(e.target.className == 'complete'){
     const li = e.target.parentElement;
     li.parentNode.removeChild(li);
   }
 });
 
-// add books
-const addForm = forms['add-book'];
+// add todos
+const addForm = forms['add-todo'];
 addForm.addEventListener('submit', function(e){
   e.preventDefault();
 
@@ -23,19 +24,19 @@ addForm.addEventListener('submit', function(e){
   const value = addForm.querySelector('input[type="text"]').value;
   const li = document.createElement('li');
   const bookName = document.createElement('span');
-  const deleteBtn = document.createElement('span');
+  const completeBtn = document.createElement('span');
 
   // add text content
   bookName.textContent = value;
-  deleteBtn.textContent = 'delete';
+  completeBtn.textContent = 'complete';
 
   // add classes
   bookName.classList.add('name');
-  deleteBtn.classList.add('delete');
+  completeBtn.classList.add('comptolete');
 
   // append to DOM
   li.appendChild(bookName);
-  li.appendChild(deleteBtn);
+  li.appendChild(completeBtn);
   list.appendChild(li);
 });
 
@@ -50,11 +51,11 @@ hideBox.addEventListener('change', function(e){
 });
 
 // filter books
-const searchBar = forms['search-books'].querySelector('input');
+const searchBar = forms['search-list'].querySelector('input');
 searchBar.addEventListener('keyup', (e) => {
   const term = e.target.value.toLowerCase();
-  const books = list.getElementsByTagName('li');
-  Array.from(books).forEach((book) => {
+  const todos = list.getElementsByTagName('li');
+  Array.from(todos).forEach((book) => {
     const title = book.firstElementChild.textContent;
     if(title.toLowerCase().indexOf(e.target.value) != -1){
       book.style.display = 'block';

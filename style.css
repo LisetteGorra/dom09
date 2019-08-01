@@ -44,26 +44,26 @@ h1, h2{
     color: #444;
 }
 
-#book-list, #add-book, #tabbed-content{
+#todo-list, #add-book, #tabbed-content{
     margin: 30px;
 }
 
-#book-list ul, #tabbed-content ul{
+#todo-list ul, #tabbed-content ul{
     list-style-type: none;
     padding: 0;
 }
 
-#book-list li{
+#todo-list li{
     padding: 20px;
     border-left: 5px solid #ddd;
     margin: 20px 10px;
 }
 
-#book-list li:hover{
+#todo-list li:hover{
     border-color: #9361bf;
 }
 
-.delete{
+.complete{
     float: right;
     background: #9361bf;
     padding: 6px;
@@ -72,16 +72,16 @@ h1, h2{
     color: white;
 }
 
-.delete:hover{
+.complete:hover{
     background: #333;
 }
 
-#add-book{
+#add-todo{
     width: 400px;
     margin: 0 auto;
 }
 
-#add-book input{
+#add-todo input{
     display: block;
     margin: 20px 0;
     padding: 10px;
@@ -94,7 +94,7 @@ h1, h2{
     clear: both;
 }
 
-#add-book button{
+#add-todo button{
     border: 1px solid #9361bf;
     background: #9361bf;
     padding: 10px 20px;
@@ -110,17 +110,17 @@ h1, h2{
     color: white;
 }
 
-#add-book:after{
+#add-todo:after{
     content: '';
     display: block;
     clear: both;
 }
 
-#add-book #hide{
+#add-todo #hide{
   width: 30px;
 }
 
-#add-book label{
+#add-todo label{
   line-height: 52px;
 }
 
